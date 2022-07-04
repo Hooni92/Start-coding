@@ -75,11 +75,42 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Git 사용법
 #### 수업 요약
-- git명령어: init(특정 폴더를  gir local repository 생성.),add(commit 전 stage영역에 올리는 역할), commit(사진을 찍는다.), branch(새로운 branch 생성),checkout(Head를 옮김),rest(이전단계로 되돌림),merge(병합)..untracked files(저장되지 않은 파일),gui.gui & (새로운 독립적인 프로세스로 관리하겠다)
-frast-forward 방식의 merge (master branch 부분의 수정이 없어 다른 branch point와 간단하게 병합하는 방식)
-후 다른 branch 삭제:git branch -d "branch name"
+- git명령어: init(특정 폴더를  gir local repository 생성.), add(commit 전 stage영역에 올리는 역할), commit(사진을 찍는다.), branch(새로운 branch 생성),checkout(Head를 옮김),rest(이전단계로 되돌림),merge(병합)..
+- untracked files(저장되지 않은 파일), gui, gui & (새로운 독립적인 프로세스로 관리하겠다)
+- frast-forward 방식의 merge (master branch 부분의 수정이 없어 다른 branch point와 간단하게 병합하는 방식)
+- 병합 후 branch 삭제:git branch -d "branch name"
+- Remote repository 생성하기 : Github 가입 -> New repository 생성 -> Rocal repository 만든다 -> Git hub 저장소를 만든다 (git remote add origin '주소') -> git push -u origin 'branch name' -> Git hub에서 확인한다.
+- Remote repository로 Push하면 remote repository를 트레킹 하는 origin/master branch가 local repository 자동 생성된다.
+- 회사 -> 깃허브 <br>
+git add . -> git commit -m "text" -> git push origin master.
+- 깃허브 -> 집 <br>
+git clone (최초), git fetch (최초 이후) -> git merge origin/master.
+- 회사에서도 update commit이 있고 집에서도 update commit있을시 회사에서 update하기<br>
+git fetch -> git merge -> :wq(frast forwad경우) 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-![image](https://user-images.githubusercontent.com/108508922/177064701-5b385954-4abd-47cc-a30b-64a574f14f08.png)
-![image](https://user-images.githubusercontent.com/108508922/177068895-15d04cdc-17be-4a35-9a72-eead0e39dc95.png)
+- Git Process<br>
+![image](https://user-images.githubusercontent.com/108508922/177064701-5b385954-4abd-47cc-a30b-64a574f14f08.png)<br>
+- master branch와 작업중인 branch 간의 병합중 충돌이 일어났을때, 작업자가 직접 수정을 해주어야 한다.<br>
+![image](https://user-images.githubusercontent.com/108508922/177068895-15d04cdc-17be-4a35-9a72-eead0e39dc95.png)<br>
+- origin/master<br>
+![image](https://user-images.githubusercontent.com/108508922/177089533-2758e6ae-2354-4806-b2ef-f9561ddf8bc3.png)<br>
+- clone
+![image](https://user-images.githubusercontent.com/108508922/177090931-a4a6d94a-2951-4d9e-a8ea-2fccd893efab.png)<br>
+![image](https://user-images.githubusercontent.com/108508922/177092097-c6200ecc-6b59-49af-8c2d-834b8d07ac8b.png)<br>
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Step01_javascript
+#### 수업 요약
+- 어떤 변수에다가 값을 기억시켜놓고 변수에 들어있는 값을 활용하여 어떤 결과를 도출한다.
+- 변수를 만들때는 미리 약속된 예약어 let 을 사용한다.
+- let 다음에는 변수의 이름을 정한다.
+- = 의 우측에 있는 값이 = 의 좌측에 들어간다.(대입된다)
+- 한줄의 끝에는 ;을 작성한다.
+- number type(숫자), string type(문자), boolean type(참,거짓), object type(묶음)알아보았다.(code참조)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- Code<br>
+![image](https://user-images.githubusercontent.com/108508922/177101829-8ed26524-e891-4a62-898d-45c4561926ab.png)<br>
+![image](https://user-images.githubusercontent.com/108508922/177118390-a624234c-fc78-4e61-8199-1f9e98dff58c.png)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+교육 ing...
 
 
