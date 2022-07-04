@@ -73,4 +73,13 @@
 ![image](https://user-images.githubusercontent.com/108508922/177042083-091d64bc-5dfb-4eb6-84d5-f1f9e703865a.png)<br>
 ![image](https://user-images.githubusercontent.com/108508922/177042109-7a680568-d48d-41c0-b590-1bdbc8d7e6f1.png)
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Git 사용법
+#### 수업 요약
+- git명령어: init(특정 폴더를  gir local repository 생성.),add(commit 전 stage영역에 올리는 역할), commit(사진을 찍는다.), branch(새로운 branch 생성),checkout(Head를 옮김),rest(이전단계로 되돌림),merge(병합)..untracked files(저장되지 않은 파일),gui.gui & (새로운 독립적인 프로세스로 관리하겠다)
+frast-forward 방식의 merge (master branch 부분의 수정이 없어 다른 branch point와 간단하게 병합하는 방식)
+후 다른 branch 삭제:git branch -d "branch name"
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+![image](https://user-images.githubusercontent.com/108508922/177064701-5b385954-4abd-47cc-a30b-64a574f14f08.png)
+![image](https://user-images.githubusercontent.com/108508922/177068895-15d04cdc-17be-4a35-9a72-eead0e39dc95.png)
+
 
