@@ -76,7 +76,7 @@
 ### Git 사용법
 #### 수업 요약
 - git명령어: init(특정 폴더를  gir local repository 생성.), add(commit 전 stage영역에 올리는 역할), commit(사진을 찍는다.), branch(새로운 branch 생성),checkout(Head를 옮김),rest(이전단계로 되돌림),merge(병합)..
-- untracked files(저장되지 않은 파일), gui, gui & (새로운 독립적인 프로세스로 관리하겠다)
+- untracked files(저장되지 않은 파일), gui (관리창을 띄움), gui & (독립적인 관리창을 띄움)
 - frast-forward 방식의 merge (master branch 부분의 수정이 없어 다른 branch point와 간단하게 병합하는 방식)
 - 병합 후 branch 삭제:git branch -d "branch name"
 - Remote repository 생성하기 : Github 가입 -> New repository 생성 -> Rocal repository 만든다 -> Git hub 저장소를 만든다 (git remote add origin '주소') -> git push -u origin 'branch name' -> Git hub에서 확인한다.
@@ -102,15 +102,35 @@ git fetch -> git merge -> :wq(frast forwad경우)
 #### 수업 요약
 - 어떤 변수에다가 값을 기억시켜놓고 변수에 들어있는 값을 활용하여 어떤 결과를 도출한다.
 - 변수를 만들때는 미리 약속된 예약어 let 을 사용한다.
-- let 다음에는 변수의 이름을 정한다.
+- let 다음에는 변수의 이름을 정한다, 
+- 변수 <br>
+   값을 저장할 수 있는 이름이 지어진 기억 공간이다.<br>
+   값을 필요한 시점에 바꿀수 있다.<br>
+   한번 선언한 변수는 다시 선언하면 안된다.<br>
+- global variable:모듈의 어디서든 호출가능, local variable: 현재 함수에서만 유효(지역변수 호출 우선순위가 높다.)
 - = 의 우측에 있는 값이 = 의 좌측에 들어간다.(대입된다)
 - 한줄의 끝에는 ;을 작성한다.
-- number type(숫자), string type(문자), boolean type(참,거짓), object type(묶음)알아보았다.(code참조)
+- object type
+ object type이 필요한 이유는? 여러개의 데이터를 하나의 묶음으로 관리하고자 할때 사용한다. {key:value, key2:value2, ...}
+ object type은 순서가 중요하지 않다.
+- array type
+- array type은 순서대로 index가 자동으로 부여된다.(array type은 objevt type의 부분집합이다.)
+ ex)let foods=["삼겹살", "치킨", "김치찌게", "냉면", "햄버거"];, foods[0]=삼겹살
+ array type:.length(size확인), .push(추가), .splice(2,1)(2번쨰 인덱스로부터 1개 삭제)
+- function typ
+ fuction type 의 중괄호는 원하는 시점에 작용할 javascript를 미리 준비해놓는 영역이다.<br>
+ ()=함수를 call한다, call뿐만 아니라 참조도 할 수 있다.
+ -숫자+숫자의 +는 산술연살자 "문자"+1의 +는 연결연산자.
+ 
+ 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - Code<br>
 ![image](https://user-images.githubusercontent.com/108508922/177101829-8ed26524-e891-4a62-898d-45c4561926ab.png)<br>
-![image](https://user-images.githubusercontent.com/108508922/177118390-a624234c-fc78-4e61-8199-1f9e98dff58c.png)
+![image](https://user-images.githubusercontent.com/108508922/177232539-d8217aec-8632-4ce4-96f9-b794cafbd84e.png)<br>
+![image](https://user-images.githubusercontent.com/108508922/177246547-5c20946c-3184-4e09-8145-263493064b62.png)<br>
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Step01_javascript
+#### 수업 요약
 교육 ing...
 
 
