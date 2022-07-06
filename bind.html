@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #head-banner{
+            width: 1000px;
+            height: 200px;
+            text-align: center;
+        }
+        #wrap{
+            width: max-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        ul li{
+            list-style-type: none; float: left; margin-left: 50px;
+            font-size: 40px;
+        }
+        #left{
+            align-content: center;
+        }
+        #login{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap"><!--전체 레이아웃-->
+        <div id="header">
+            <div id="login">
+                <button><a href="log_in.html">로그인</a></button>
+                <button><a href="sing_up.html">회원가입</a></button>
+            </div>
+            <div><a href="bind.html"><img src="images/blog-title.png" id="head-banner"></a></div>
+        </div><!--header-->
+        <hr>
+            <div id="container"><!--container 시작-->
+                <div id="left">
+                    <ul>
+                        <li><a href="NETFLIX.html">NETFLIX</a></li>
+                        <li><a href="WAVE.html">WAVE</a></li>
+                        <li><a href="WATCHA.html">WATCHA</a></li>
+                    </ul>
+                </div><!--left-->
+                <div id="right"><img src="images/top01.jpg" alt="메인사진,광고"></div><!--right-->
+            </div><!--container 끝-->
+            <hr>
+                <div id="footer">고객센터:02-1234-5678</div><!--footer-->
+        </div><!--전체 레이아웃 끝-->
+</body>
+</html>
