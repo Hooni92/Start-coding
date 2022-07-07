@@ -114,7 +114,7 @@ git fetch -> git merge -> :wq(frast forwad경우)
  object type이 필요한 이유는? 여러개의 데이터를 하나의 묶음으로 관리하고자 할때 사용한다. {key:value, key2:value2, ...}
  object type은 순서가 중요하지 않다.
 - array type
-- array type은 순서대로 index가 자동으로 부여된다.(array type은 objevt type의 부분집합이다.)
+ array type은 순서대로 index가 자동으로 부여된다.(array type은 objevt type의 부분집합이다.)
  ex)let foods=["삼겹살", "치킨", "김치찌게", "냉면", "햄버거"];, foods[0]=삼겹살
  array type:.length(size확인), .push(추가), .splice(2,1)(2번쨰 인덱스로부터 1개 삭제)
 - function typ
@@ -125,26 +125,29 @@ git fetch -> git merge -> :wq(frast forwad경우)
  objec type, array type, fuction type의 데이터가 heap영역에 들어간다, heap영역에 들어가면 value가 아닌 key값(참조값)으로 대체된다.
  - stack 영억
  number type, string type, boolean type, referance data(참조값)이 들어있다.
- 
  -문서 객체는 오브젝트와 유사하다.
+ -document.querySelector("CSS형식 처럼 요소를 부른다 ex)요소명,#id,.class")
+  JS영역에서 HTML 영역에 있는 해당요소를 가져온다.
+ -document.querySelectorAll()
+  JS영역에서 HTML 영엑에 있는 해당 요소를 배열 형태로 가져온다.
  
- 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - Code<br>
 ![image](https://user-images.githubusercontent.com/108508922/177101829-8ed26524-e891-4a62-898d-45c4561926ab.png)<br>
 ![image](https://user-images.githubusercontent.com/108508922/177232539-d8217aec-8632-4ce4-96f9-b794cafbd84e.png)<br>
 ![image](https://user-images.githubusercontent.com/108508922/177246547-5c20946c-3184-4e09-8145-263493064b62.png)<br>
-- stack & heap 영역
-![image](https://user-images.githubusercontent.com/108508922/177442531-2931fdf8-4f5d-46af-a1ce-aec1a61aede3.png)
+- stack & heap 영역<br>
+![image](https://user-images.githubusercontent.com/108508922/177442531-2931fdf8-4f5d-46af-a1ce-aec1a61aede3.png)<br>
 - 문서 <br> 
-![image](https://user-images.githubusercontent.com/108508922/177459454-1a0a42ac-f343-4829-900a-95c9a44044e7.png)
+![image](https://user-images.githubusercontent.com/108508922/177459454-1a0a42ac-f343-4829-900a-95c9a44044e7.png)<br>
 -p의 참조값을 얻어오는 방법 <br>
-![image](https://user-images.githubusercontent.com/108508922/177460787-e93b0857-a9ae-427a-8230-525517002474.png)
+![image](https://user-images.githubusercontent.com/108508922/177460787-e93b0857-a9ae-427a-8230-525517002474.png)<br>
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-### Step01_javascript
+### Step02_event
 #### 수업 요약
+
 교육 ing...
 
 
