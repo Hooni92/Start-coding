@@ -172,6 +172,19 @@ git fetch -> git merge -> :wq(frast forwad경우)
 ![image](https://user-images.githubusercontent.com/108508922/177901453-dd24a37e-119c-40de-9ccc-1b5a10de3d92.png)
 - function 함수
 ![image](https://user-images.githubusercontent.com/108508922/177906143-279cacd4-562b-4171-9254-f90a31b8cb4c.png)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Step03_
+#### 수업 요약
+Thread 페이지 로딩시점에 순서대로 작업하는것.필요시 나타나기도 한다.
+var은 지역변수로 사용해도 전역변수로 된다.좋을거 없다. 
+++num, num++ 증가시키고 대입, 대입하고 증가시키고
+xxx.addEventListener{}안의this는 이벤트가 일어나는 그요소.(xxx=this)
+비동기처리,
+동기처리,
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+![image](https://user-images.githubusercontent.com/108508922/178169269-79f33229-c84c-4da4-9528-258cc2a90148.png)
+![image](https://user-images.githubusercontent.com/108508922/178200670-0fd157cc-4a08-4fd8-9b86-9b8b5864cb2a.png)
+![image](https://user-images.githubusercontent.com/108508922/178204608-7520a177-cefc-4d49-a558-b4a444f012f6.png)
 
 
 
