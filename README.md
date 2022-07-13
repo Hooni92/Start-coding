@@ -210,14 +210,25 @@ CMD 우클릭 속성 → 빠른 편집모드 삽입모드 체크 → sqlplus.exe
 - 사용자 계정으로 접속하기<br>
 CMD → sqlplus.exe → 아이디,비밀번호 입력<br>
 - Mariadb 무료<br>
-- DB에 저장하는 정보는 주로 1)숫자, 2)문자, 3)날짜를 저장하며 표(table) 형식으로 저장한다<br>
+- DB에 저장하는 정보는 주로 1)숫자(number), 2)문자(varchar2(), 3)날짜(sysdate)를 저장하며 표(table) 형식으로 저장한다<br>
 - 테이블 만들기
   create table 이름;
   (제목 number, 제목 varchar2(영문자 기준 글자수), addr varchare2(20-영문자 기준으로 글자수));
 - 테이블 데이터 넣기
   desc 테이블이름 (테이블 확인하기)
+   ed->메모장 수정 후 저장 닫기 -> 엔터
   commit 전까지는 임시 수정
-  수많은 회원정보중 한사람을 삭제시키려면 primary key값을 삭제
+  수많은 회원정보중 한사람을 삭제시키려면 primary key값을 삭제 
+- dummy라는 컬럼을 가진 table dual을 제공한다.
+-scott 계정만들기
+관리자로 접속 @scott파일 경로
+C:\oraclexe\app\oracle\product\10.2.0\server\RDBMS\ADMIN
+아이디 비밀번호 입력후 접속
+- (1) Select 
+- 만들어져 있는 emp 테이블로 퀴즈풀기 (퀴즈 사진첨부)
+- 정렬 order by asc(오름차순) or desc(내림차순)
+- (2) Where
+- 값이 ture인 row만 불러온다.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - 데이터베이스 S/W<br>
 ![image](https://user-images.githubusercontent.com/108508922/178633513-4912e24a-7391-47b9-a4f2-5e2f618eda9b.png)<br>
@@ -237,14 +248,92 @@ CMD → sqlplus.exe → 아이디,비밀번호 입력<br>
 ![image](https://user-images.githubusercontent.com/108508922/178641248-5d3480d2-38f7-4b41-84de-7bb7a2a9fcbd.png)<br>
 - data 삭제하기<br>
 ![image](https://user-images.githubusercontent.com/108508922/178642400-f177fbaf-c4df-415c-8e56-66a8e904171e.png)<br>
-- table 삭제하기<br>
+- table 행 선택 삭제하기<br>
 ![image](https://user-images.githubusercontent.com/108508922/178642445-23b77312-5a30-4c21-abcc-f04d682a6947.png)<br>
-
-
-
-
--
-  
+- table 삭제, 롤백<br>
+![image](https://user-images.githubusercontent.com/108508922/178659664-2a926558-afd1-4170-a785-a27bb597f555.png)
+- dual table<br>
+![image](https://user-images.githubusercontent.com/108508922/178661727-f42056fb-afdf-4ad2-8d24-51b46e6bdc87.png)
+-순차적으로 순차적으로 반환해주는 seq<br>
+![image](https://user-images.githubusercontent.com/108508922/178662232-13e0e556-5551-4939-8ee7-536a0938a308.png)
+-관용적 약어표현<br>
+![image](https://user-images.githubusercontent.com/108508922/178664518-e947b1d0-ecae-4f72-ba73-bb4427237830.png)
+- 선택자 퀴즈<br>
+- 예제1~4)<br>
+![image](https://user-images.githubusercontent.com/108508922/178670997-d6d28c39-9aaa-4a11-b788-e6c4aabcdbe2.png)<br>
+- 해설1~4)<br>
+![image](https://user-images.githubusercontent.com/108508922/178671124-59cd9f49-f694-492b-ace7-2ec22360dce6.png)<br>
+![image](https://user-images.githubusercontent.com/108508922/178671192-6984bf18-22be-4d54-9fbb-2e6e45e40b71.png)<br>
+![image](https://user-images.githubusercontent.com/108508922/178671258-4e2e551f-e42f-4192-98ad-e85aefa560d3.png)<br>
+![image](https://user-images.githubusercontent.com/108508922/178671330-a4661aaa-dd43-447b-a98d-70d7e9eec901.png)<br>
+- where절 퀴즈<br>
+- 예제1~2)<br>
+![image](https://user-images.githubusercontent.com/108508922/178673478-acdd8972-0b1e-4d89-a129-4ed0dd278165.png)<br>
+- 해설1~2)<br>
+![image](https://user-images.githubusercontent.com/108508922/178673564-642b77fd-a73f-4eae-a84a-a7c5d2776693.png)<br>
+![image](https://user-images.githubusercontent.com/108508922/178673614-613753c4-d2ea-4d0b-affb-c7697e0fbef0.png)<br>
+- 예제3~4<br>
+![image](https://user-images.githubusercontent.com/108508922/178676580-47c3eaf5-2d8a-49e9-9bc4-c6a36e84e642.png)<br>
+- 해설3~4<br>
+![image](https://user-images.githubusercontent.com/108508922/178676642-43f5464d-98d3-4e63-bdf7-a0f09b3a4319.png)<br>
+![image](https://user-images.githubusercontent.com/108508922/178676731-351faab9-0ead-4142-a2b5-6fb676cd3338.png)<br>
+- select from where 실행순서<br>
+![image](https://user-images.githubusercontent.com/108508922/178672283-1390d1f1-ae4d-4b1a-a56a-509448e12e1a.png)<br>
+- 기본형식 실행순서<br>
+![image](https://user-images.githubusercontent.com/108508922/178672489-af07a157-cea2-433c-83d5-ef5c14072bef.png)<br>
+- ALIAS 사용하기<br>
+- 예제1)<br>
+![image](https://user-images.githubusercontent.com/108508922/178677939-95c1090d-f8e3-4abc-9235-64e863194871.png)<br>
+- 해설1)<br>
+![image](https://user-images.githubusercontent.com/108508922/178677601-f21f45ff-1214-4b2e-9c02-0b075963963d.png)<br>
+- 연산자<br>
+- 예제1)<br>
+![image](https://user-images.githubusercontent.com/108508922/178678114-71de74ee-c02a-49e8-b68d-c965cc34cef4.png)<br>
+- 해설1<br>
+![image](https://user-images.githubusercontent.com/108508922/178678477-a3bd3f44-53d7-474d-96c7-c8e289c64bad.png)<br>
+- 예제2~3)<br>
+![image](https://user-images.githubusercontent.com/108508922/178693095-5e8b0810-512b-4b5f-95dd-782722f1d928.png)<br>
+- 해설2~3)<br>
+![image](https://user-images.githubusercontent.com/108508922/178693520-483bf3dd-e4ab-4474-b20a-169102b65ad7.png)<br>
+![image](https://user-images.githubusercontent.com/108508922/178693661-ba95db1d-5876-49f1-af8e-dfe38749b3cf.png)<br>
+- 예제4~5)<br>
+![image](https://user-images.githubusercontent.com/108508922/178693810-03fdbd84-ff07-4232-9dee-5d7345a75394.png)<br>
+- 해설4~5)<br>
+![image](https://user-images.githubusercontent.com/108508922/178693983-e950ff8f-7008-4900-991b-778f82a5d6a5.png)<br>
+- 예제6)<br>
+![image](https://user-images.githubusercontent.com/108508922/178694077-df977e8a-15b4-439f-bbef-b469be5c340b.png)<br>
+- 해설6)<br>
+![image](https://user-images.githubusercontent.com/108508922/178694250-d3bb87c7-16c8-4bf2-ba75-b312bb4284a9.png)<br>
+- 예제7~8)<br>
+![image](https://user-images.githubusercontent.com/108508922/178694384-9b2eb263-7da3-4629-9582-d9e47749cbb6.png)<br> 
+- 해설7~8)<br>
+![image](https://user-images.githubusercontent.com/108508922/178694508-805c7ab1-fcd7-4c60-95e8-63688d6ba2b9.png)<br>
+![image](https://user-images.githubusercontent.com/108508922/178694609-102513e8-9d87-474e-aa00-7643ae07e9f7.png)<br>
+- 예제9~10)<br>
+![image](https://user-images.githubusercontent.com/108508922/178694878-689f3551-a3df-47ac-bcd0-b3c4bffc2d31.png)<br>
+- 해설9~10)<br>
+![image](https://user-images.githubusercontent.com/108508922/178695000-143d16ab-f787-418a-a083-a23d7b467c1b.png)<br>
+![image](https://user-images.githubusercontent.com/108508922/178695050-0fbe6272-e569-486d-a8d0-c9ffaca3488b.png)<br>
+- 예제11~12)<br>
+![image](https://user-images.githubusercontent.com/108508922/178695188-257d416f-cbb5-4f70-a182-4b376f44fc37.png)<br>
+- 해설11~12)<br>
+![image](https://user-images.githubusercontent.com/108508922/178695264-cabbb0c7-0153-4697-9e2e-b158698e55e9.png)<br>
+- 예제13)<br>
+![image](https://user-images.githubusercontent.com/108508922/178695342-a5872908-1089-491d-8ec7-1aeb53bbaef4.png)<br>
+- 해설13)<br>
+![image](https://user-images.githubusercontent.com/108508922/178695449-0a79677c-3908-43ec-8440-c9a711f9ae7f.png)<br>
+- 예제14~15)<br>
+![image](https://user-images.githubusercontent.com/108508922/178695582-86c86fc5-d08a-4c02-a972-c11f0d8418c5.png)<br>
+- 해설14~15)<br>
+![image](https://user-images.githubusercontent.com/108508922/178695692-de7bb79f-7442-486d-965a-355cb85678eb.png)<br>
+![image](https://user-images.githubusercontent.com/108508922/178696075-82df725a-ed81-4d94-b662-3baf78a79dc7.png)<br>
+- 예제16~18)<br>
+![image](https://user-images.githubusercontent.com/108508922/178696371-278e543d-0a58-4a28-a4d7-ea735428ad4e.png)<br>
+- 해설16~18)<br>
+![image](https://user-images.githubusercontent.com/108508922/178696754-d305684a-ffb2-4c87-8a45-f1912819b1b1.png)<br>
+![image](https://user-images.githubusercontent.com/108508922/178697041-d15b83d0-9ac3-4b8f-8736-624592e4b28a.png)<br>
+![image](https://user-images.githubusercontent.com/108508922/178697105-ebfb2a90-04a1-4aa5-b64b-073668cdea90.png)<br>
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 교육 ing...
 
 
