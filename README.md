@@ -192,9 +192,58 @@ svg-폰트,백터
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ![image](https://user-images.githubusercontent.com/108508922/178404127-09657893-e138-489b-9244-f715b1885a03.png)
+### Step03_
+#### 수업 요약
+- flex-direction 축방향은 item이 쌓이는 방향 즉 colume이면 세로 row면 가로 축이 생기고, column이면 좌측이 start 우측이 end
+row면 위쪽이 start 아래쪽이 end.
+- flex-wrap 부모 div가 자식 div를 감쌀지 선택, revers는 거꾸로 감싼다
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- flex-direction 
+![image](https://user-images.githubusercontent.com/108508922/178624453-a98258ff-c4b6-4200-833e-429554544b23.png)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### 데이터베이스01
+#### 수업 요약
+-명령 프롬프트<br>
+- 관리자로 로그인해서 사용자 계정만들기<br>
+CMD 우클릭 속성 → 빠른 편집모드 삽입모드 체크 → sqlplus.exe → 사용자명:system → 비밀번호:oracle → 사용자 계정 만들기 → CREATE USER 아이디 IDENTIFIED BY 비밀번호; GRANT CONNECT, RESOURCE TO 아이디;(접속과 권한을 acorn에게 주겠다).<br>
+- 사용자 계정으로 접속하기<br>
+CMD → sqlplus.exe → 아이디,비밀번호 입력<br>
+- Mariadb 무료<br>
+- DB에 저장하는 정보는 주로 1)숫자, 2)문자, 3)날짜를 저장하며 표(table) 형식으로 저장한다<br>
+- 테이블 만들기
+  create table 이름;
+  (제목 number, 제목 varchar2(영문자 기준 글자수), addr varchare2(20-영문자 기준으로 글자수));
+- 테이블 데이터 넣기
+  desc 테이블이름 (테이블 확인하기)
+  commit 전까지는 임시 수정
+  수많은 회원정보중 한사람을 삭제시키려면 primary key값을 삭제
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- 데이터베이스 S/W<br>
+![image](https://user-images.githubusercontent.com/108508922/178633513-4912e24a-7391-47b9-a4f2-5e2f618eda9b.png)<br>
+- 데이더베이스 저장정보<br>
+![image](https://user-images.githubusercontent.com/108508922/178635330-2e1fdd43-63f3-424f-a33d-2c3dc3ee678f.png)<br>
+- Client to DB to Client<br>
+![image](https://user-images.githubusercontent.com/108508922/178636215-d8ada0e9-2494-4dbf-bd9a-5030e35d7161.png)<br>
+- table 만들기<br>
+![image](https://user-images.githubusercontent.com/108508922/178637287-b9995244-fea7-4576-b607-5618af2166cb.png)<br>
+- table data 넣기<br>
+![image](https://user-images.githubusercontent.com/108508922/178638979-0b01ff62-1432-4cc5-84e6-fa5ed2e5f555.png)<br>
+- 넣은 data 확인하기<br>
+![image](https://user-images.githubusercontent.com/108508922/178639345-0ec697aa-ef18-406d-8127-121b67f20335.png)<br>
+![image](https://user-images.githubusercontent.com/108508922/178639590-0aaf996f-a715-410c-bc0d-588c6cc25882.png)<br>
+![image](https://user-images.githubusercontent.com/108508922/178640178-9e6fdbee-94b4-44ab-844a-21ac705e11f5.png)<br>
+- data 변경하기<br>
+![image](https://user-images.githubusercontent.com/108508922/178641248-5d3480d2-38f7-4b41-84de-7bb7a2a9fcbd.png)<br>
+- data 삭제하기<br>
+![image](https://user-images.githubusercontent.com/108508922/178642400-f177fbaf-c4df-415c-8e56-66a8e904171e.png)<br>
+- table 삭제하기<br>
+![image](https://user-images.githubusercontent.com/108508922/178642445-23b77312-5a30-4c21-abcc-f04d682a6947.png)<br>
 
 
 
+
+-
   
 교육 ing...
 
