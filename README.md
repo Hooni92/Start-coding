@@ -86,7 +86,10 @@ git add . -> git commit -m "text" -> git push origin master.
 - 깃허브 -> 집 <br>
 git clone (최초), git fetch (최초 이후) -> git merge origin/master.
 - 회사에서도 update commit이 있고 집에서도 update commit있을시 회사에서 update하기<br>
-git fetch -> git merge -> :wq(frast forwad경우) 
+   1) git fetch -> git merge -> :wq(frast forwad경우) 
+- 변경사항 취소하기 (add전)
+   1) git restore .
+   2) git clean -fd
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - Git Process<br>
 ![image](https://user-images.githubusercontent.com/108508922/177064701-5b385954-4abd-47cc-a30b-64a574f14f08.png)<br>
@@ -197,23 +200,25 @@ svg-폰트,백터
 - flex-direction 축방향은 item이 쌓이는 방향 즉 colume이면 세로 row면 가로 축이 생기고, column이면 좌측이 start 우측이 end
 row면 위쪽이 start 아래쪽이 end.
 - flex-wrap 부모 div가 자식 div를 감쌀지 선택, revers는 거꾸로 감싼다
-
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - flex-direction 
 ![image](https://user-images.githubusercontent.com/108508922/178624453-a98258ff-c4b6-4200-833e-429554544b23.png)
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### 데이터베이스01
 #### 수업 요약
--명령 프롬프트<br>
+- 명령 프롬프트<br>
 - 관리자로 로그인해서 사용자 계정만들기<br>
-CMD 우클릭 속성 → 빠른 편집모드 삽입모드 체크 → sqlplus.exe → 사용자명:system → 비밀번호:oracle → 사용자 계정 만들기 → CREATE USER 아이디 IDENTIFIED BY 비밀번호; GRANT CONNECT, RESOURCE TO 아이디;(접속과 권한을 acorn에게 주겠다).<br>
+   1) CMD 우클릭 속성 → 빠른 편집모드 삽입모드 체크 → sqlplus.exe → 사용자명:system → 비밀번호:oracle → 사용자 계정 만들기 → CREATE USER 아이디 IDENTIFIED BY 비밀번호; GRANT CONNECT, RESOURCE TO 아이디;(접속과 권한을 acorn에게 주겠다).<br>
 - 사용자 계정으로 접속하기<br>
-CMD → sqlplus.exe → 아이디,비밀번호 입력<br>
+   1) CMD → sqlplus.exe → 아이디,비밀번호 입력<br>
 - Mariadb 무료<br>
-- DB에 저장하는 정보는 주로 1)숫자(number), 2)문자(varchar2(), 3)날짜(sysdate)를 저장하며 표(table) 형식으로 저장한다<br>
+- DB에 저장하는 정보는 숫자,문자,날짜이며 table 형식으로 저장한다. 
+   1) 숫자(number), 
+   2) 문자(varchar2(), 
+   3) 날짜(sysdate)
 - 테이블 만들기
-  create table 이름;
-  (제목 number, 제목 varchar2(영문자 기준 글자수), addr varchare2(20-영문자 기준으로 글자수));
+   1) create table 이름;
+   2) (숫자type column명 number, 문자type column명 varchar2(영문자 기준 글자수), 문자type column varchare2(20-영문자 기준으로 글자수));
 - 테이블 데이터 넣기
   desc 테이블이름 (테이블 확인하기)
    ed->메모장 수정 후 저장 닫기 -> 엔터
@@ -334,6 +339,61 @@ C:\oraclexe\app\oracle\product\10.2.0\server\RDBMS\ADMIN
 ![image](https://user-images.githubusercontent.com/108508922/178697041-d15b83d0-9ac3-4b8f-8736-624592e4b28a.png)<br>
 ![image](https://user-images.githubusercontent.com/108508922/178697105-ebfb2a90-04a1-4aa5-b64b-073668cdea90.png)<br>
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##데이터베이스_02
+- join
+- ansi join
+   1)inner join 
+      1)where 절에 join을 하는 복잡한 코드를 적지 않아도 된다.
+   2)using
+      1) 동일한 컬럼명을 가지고 있을때 사용 가능하다
+   2)outer join
+      1) 행이 추가되는쪽에 (+)를 붙여준다
+      2) (+)가 붙는쪽으로 left or right 써주고 (+)는 생략
+- self join
+   1) 테이블의 별칭을 지어주고 조인시킨다.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- join 기본 표현방식<br>
+![image](https://user-images.githubusercontent.com/108508922/179124935-65b52c12-d0bd-45f9-b337-9afa123eb7d3.png)
+- ansi join using()<br>
+![image](https://user-images.githubusercontent.com/108508922/179125013-b5aa5101-3993-4f39-86d6-7eb1b4d7d8e0.png)
+- self joing<br>
+![image](https://user-images.githubusercontent.com/108508922/179126709-024d3834-f98f-4cb9-bc16-d41e2d12c821.png)
+- outter join<br>
+![image](https://user-images.githubusercontent.com/108508922/179126997-c583b8e5-3479-465a-81cc-542275eb988a.png)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##데이터베이스_03
+- rownum: 행번호을 부여하고 싶을때 쓰는 함수
+- 서브쿼리의 결과가 다중행을 가질때 동등연산자 (=)을 사용할 수 없다,대신 in, all, any, exist 의 다중행 연산자를 사용한다
+   1) in:같은지 비교하고 싶을떄
+- 관계형 데이터베이스
+- DML
+primary key: 중복과 null 둘다 허용하지 않음
+unique: 중복만 허용하지 않음
+not null: null만 허용하지않음
+references tablename(column name): 제약조건
+not null + uniq
+- USER_TABLES만들어져 있는 테이블 조회
+- USER_SEQUNECES만들어져있는 시퀀스 조회
+- USER_CONSTRAINTS제약조건의 정보를 조회  
+create 생성
+drop 삭제
+alter 개체를 수정(ex)table)
+   modify 컬럼type 수정
+   rename a to b : column 이름을 a에서 b로 변경
+   drop:컬럼 삭제 
+   add(constraint table수준의 constraint 추가): column에 제약조건 추가하기 
+modify : 컬럼을 수정
+update : ?
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+- LEAD , LAG , OVER<br>
+![image](https://user-images.githubusercontent.com/108508922/179143282-77b65343-06f7-4f70-8925-2b000a7db5fb.png)
+- 제약조건 명명하는 2가지 방법<br>
+![image](https://user-images.githubusercontent.com/108508922/179178522-84da5ef4-c982-4351-afcb-4fda34319944.png)
+
+
 교육 ing...
 
 
