@@ -206,10 +206,15 @@ row면 위쪽이 start 아래쪽이 end.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### 데이터베이스01
 #### 수업 요약
-- 명령 프롬프트<br>
-- 관리자로 로그인해서 사용자 계정만들기<br>
-   1) CMD 우클릭 속성 → 빠른 편집모드 삽입모드 체크 → sqlplus.exe → 사용자명:system → 비밀번호:oracle → 사용자 계정 만들기 → CREATE USER 아이디 IDENTIFIED BY 비밀번호; GRANT CONNECT, RESOURCE TO 아이디;(접속과 권한을 acorn에게 주겠다).<br>
-- 사용자 계정으로 접속하기<br>
+- 명령 프롬프트
+- 관리자로 로그인해서 사용자 계정만들기
+   1) CMD 우클릭 속성 
+   2) 빠른 편집모드 삽입모드 체크 
+   3) sqlplus.exe 
+   4) 사용자명:system 비밀번호:oracle 
+   5) 사용자 계정 만들기 
+   6) CREATE USER 아이디 IDENTIFIED BY 비밀번호; GRANT CONNECT, RESOURCE TO 아이디;(접속과 권한을 acorn에게 주겠다).<br>
+   7) 사용자 계정으로 접속하기<br>
    1) CMD → sqlplus.exe → 아이디,비밀번호 입력<br>
 - Mariadb 무료<br>
 - DB에 저장하는 정보는 숫자,문자,날짜이며 table 형식으로 저장한다. 
@@ -220,20 +225,24 @@ row면 위쪽이 start 아래쪽이 end.
    1) create table 이름;
    2) (숫자type column명 number, 문자type column명 varchar2(영문자 기준 글자수), 문자type column varchare2(20-영문자 기준으로 글자수));
 - 테이블 데이터 넣기
-  desc 테이블이름 (테이블 확인하기)
-   ed->메모장 수정 후 저장 닫기 -> 엔터
-  commit 전까지는 임시 수정
-  수많은 회원정보중 한사람을 삭제시키려면 primary key값을 삭제 
-- dummy라는 컬럼을 가진 table dual을 제공한다.
+  1) desc 테이블이름 (테이블 확인하기)
+  2) insert into tablename<br>
+     (컬럼명, 컬럼명,...)<br>
+     values (입력값, 입력값,...);<br>
+  3) tip) ed->메모장 수정 후 저장 닫기 -> 엔터
+  4) commit 전까지는 임시 수정이다
+- 수많은 회원정보중 한사람을 삭제시키려면 primary key값을 삭제 
+- dummy라는 컬럼을 가진 table dual을 제공한다. (console.log처럼 입력값을 확인해볼수있음)
 -scott 계정만들기
-관리자로 접속 @scott파일 경로
-C:\oraclexe\app\oracle\product\10.2.0\server\RDBMS\ADMIN
-아이디 비밀번호 입력후 접속
+   1) 관리자로 접속 
+   2) @scott파일 경로 ex) @C:\oraclexe\app\oracle\product\10.2.0\server\RDBMS\ADMIN
+   3) 새 명령프롬프트 -> 아이디 비밀번호 입력후 접속
 - (1) Select 
-- 만들어져 있는 emp 테이블로 퀴즈풀기 (퀴즈 사진첨부)
-- 정렬 order by asc(오름차순) or desc(내림차순)
+   1) 불러 오고자 하는 Column name을 입력한다
 - (2) Where
-- 값이 ture인 row만 불러온다.
+   1) 값이 ture인 row만 불러온다.
+- (3) Order by 
+   1) asc(오름차순) or desc(내림차순)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - 데이터베이스 S/W<br>
 ![image](https://user-images.githubusercontent.com/108508922/178633513-4912e24a-7391-47b9-a4f2-5e2f618eda9b.png)<br>
@@ -339,7 +348,8 @@ C:\oraclexe\app\oracle\product\10.2.0\server\RDBMS\ADMIN
 ![image](https://user-images.githubusercontent.com/108508922/178697041-d15b83d0-9ac3-4b8f-8736-624592e4b28a.png)<br>
 ![image](https://user-images.githubusercontent.com/108508922/178697105-ebfb2a90-04a1-4aa5-b64b-073668cdea90.png)<br>
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-##데이터베이스_02
+## 데이터베이스_02
+#### 수업 요약
 - join
 - ansi join
    1)inner join 
@@ -347,11 +357,10 @@ C:\oraclexe\app\oracle\product\10.2.0\server\RDBMS\ADMIN
    2)using
       1) 동일한 컬럼명을 가지고 있을때 사용 가능하다
    2)outer join
-      1) 행이 추가되는쪽에 (+)를 붙여준다
-      2) (+)가 붙는쪽으로 left or right 써주고 (+)는 생략
+      1) row를 받는쪽에 (+)를 붙여준다
+      2) row가 추가되는쪽으로 left or right 써주고 (+)는 생략
 - self join
    1) 테이블의 별칭을 지어주고 조인시킨다.
-
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - join 기본 표현방식<br>
 ![image](https://user-images.githubusercontent.com/108508922/179124935-65b52c12-d0bd-45f9-b337-9afa123eb7d3.png)
@@ -362,11 +371,36 @@ C:\oraclexe\app\oracle\product\10.2.0\server\RDBMS\ADMIN
 - outter join<br>
 ![image](https://user-images.githubusercontent.com/108508922/179126997-c583b8e5-3479-465a-81cc-542275eb988a.png)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-##데이터베이스_03
+## 데이터베이스_03
+#### 수업 요약
 - rownum: 행번호을 부여하고 싶을때 쓰는 함수
-- 서브쿼리의 결과가 다중행을 가질때 동등연산자 (=)을 사용할 수 없다,대신 in, all, any, exist 의 다중행 연산자를 사용한다
-   1) in:같은지 비교하고 싶을떄
-- 관계형 데이터베이스
+- 서브쿼리: 하나의 SQL문장절에 포함된 또다른 SELECT문장, 따라서 두번 질의를 한번의 질의로 해결이 가능하다.
+   1)Main-Query = Outer Query , Sub-Qury = Inner-Query
+   2)반드시 괄호로 묶어야한다.
+   3)서브쿼리 위치
+      1) select / delete / update 문의 from 절과 where 절
+      2) select 문의 having절
+      3) insert 문의 into 절
+      4) update 문의 set절
+   4) 종류
+      1) 단일행 서브쿼리:서브쿼리의 결과가 하나의 컬럼과 하나의 행만을 리턴해주는 쿼리
+      2) 복수행 서브쿼리:서브쿼리의 결과가 하나의 컬럼과 여러개의 행을 리턴해주는 쿼리
+   5) 서브쿼리의 결과가 다중행을 가질때 동등연산자 (=)을 사용할 수 없다
+   6) 대신 in, all, any, exist 의 다중행 연산자를 사용한다
+      1) in: 비교조건이 서브쿼리의 결과중에서 하나라도 일치하면 true
+      2) all: 비교조건이 서브쿼리의 결과와 모두 일치하면 true
+      3) any: 비교조건이 서브쿼리의 결과와 하나 이상이 일치하면 true
+      4) exist: 비교조건이 서브쿼리의 결과중에 하나라도 만족하는 값이 존재하면 true
+- 데이터 모델
+   1) 계층형
+      1)추후 개인학습
+   2) 네트워크형
+      1)추후 개인학습
+   3) 관계형
+      1)특징
+         1) 행과 열을 가진 2차원 표에 데이터를 저장하는 모델.
+         2) 여러가지 표를 조합하여 데이터를 유연하게 대응할 수 있다는 특징이 있다.
+         3) 독립적으로 관리가 쉽다
 - DML
 primary key: 중복과 null 둘다 허용하지 않음
 unique: 중복만 허용하지 않음
@@ -376,22 +410,69 @@ not null + uniq
 - USER_TABLES만들어져 있는 테이블 조회
 - USER_SEQUNECES만들어져있는 시퀀스 조회
 - USER_CONSTRAINTS제약조건의 정보를 조회  
-create 생성
-drop 삭제
-alter 개체를 수정(ex)table)
-   modify 컬럼type 수정
-   rename a to b : column 이름을 a에서 b로 변경
-   drop:컬럼 삭제 
-   add(constraint table수준의 constraint 추가): column에 제약조건 추가하기 
-modify : 컬럼을 수정
-update : ?
-
+- create 생성
+   1) create user
+   2) create table
+   3) create sequence
+- drop 삭제
+   1) drop user
+   2) drop table
+   3) drop sequence
+- alter 개체를 수정(ex)table)
+   1) alter modify: 컬럼type 수정
+   2) alter rename a to b : column 이름을 a에서 b로 변경
+   3) alter drop:컬럼 삭제 
+   4) alter add(constraint table수준의 constraint 추가): column에 제약조건 추가하기 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 - LEAD , LAG , OVER<br>
 ![image](https://user-images.githubusercontent.com/108508922/179143282-77b65343-06f7-4f70-8925-2b000a7db5fb.png)
 - 제약조건 명명하는 2가지 방법<br>
 ![image](https://user-images.githubusercontent.com/108508922/179178522-84da5ef4-c982-4351-afcb-4fda34319944.png)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### 데이터베이스04, javascript_ecma6
+#### 수업 요약
+- data복사
+   1) 내용 복사:insert into member2 select * from member;
+   2) 테이블 복사:create table member3 as select * from member;
+   3) 테이블 구조만 복사:create table emp2 as select * from emp where 1=2;
+
+- 오라클 시작 안될때   
+   1)탐색기
+   2)내PC 우클릭
+   3)관리
+   4)서비스 및 응용프로그램
+   5)서비스
+   6)Oracleservice, oraclelistener 실행
+- arrow function
+   1) fucntion(){} = ()=>{}
+   2) 주의사항 
+      1) const divs=document.querySelectorAll(".box");<br>
+           for(let i=0; i<divs.length; i++){<br>
+              divs[i].addEventListener("click", ()=>{<br>
+                  console.log(this);<br>
+              })<br>
+          }<br>
+      2) 화살표 함수 안에서 this는 이벤트가 일어난 바로 그요소를 가르키지 못한다
+
+           
+        
+- javascript_ecma6_Step02
+   1)람다함수
+      1)함수안에 복잡한 javascript가 없을때 한줄로 표현할 수 있다.
+      2)let 변수명 = (num1, num2) => 리턴값;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- 내용복사 
+![image](https://user-images.githubusercontent.com/108508922/179457009-68412bf7-ee0f-46f0-b6cd-ab6b11adce13.png)
+- 테이블복사
+![image](https://user-images.githubusercontent.com/108508922/179457180-0a30448d-9292-47ee-922c-4bd0308e1136.png)
+- 테이블 구조만 복사<br>
+![image](https://user-images.githubusercontent.com/108508922/179456734-42910426-42a5-41ee-8b34-8cab86bbd821.png)
+- 오라클실행오류
+![image](https://user-images.githubusercontent.com/108508922/179460050-e506436b-577f-41b9-adca-d0fe946bf40c.png)
+-
+![image](https://user-images.githubusercontent.com/108508922/179461990-b5f4fd3a-4e9c-44ae-a7ea-7f7a936abefb.png)
 
 
 교육 ing...
