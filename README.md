@@ -454,8 +454,6 @@ not null + uniq
               })<br>
           }<br>
       2) 화살표 함수 안에서 this는 이벤트가 일어난 바로 그요소를 가르키지 못한다
-
-           
         
 - javascript_ecma6_Step02
    1)람다함수
@@ -473,8 +471,11 @@ not null + uniq
 ![image](https://user-images.githubusercontent.com/108508922/179460050-e506436b-577f-41b9-adca-d0fe946bf40c.png)
 -
 ![image](https://user-images.githubusercontent.com/108508922/179461990-b5f4fd3a-4e9c-44ae-a7ea-7f7a936abefb.png)
-
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### javascript_ecma6 
+#### 수업 요약
+비동기 작업
 교육 ing...
+
 
 
