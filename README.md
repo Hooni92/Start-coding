@@ -129,9 +129,9 @@ git clone (최초), git fetch (최초 이후) -> git merge origin/master.
  - stack 영억
  number type, string type, boolean type, referance data(참조값)이 들어있다.
  - 문서 객체는 오브젝트와 유사하고 사물함에 보관되어 참조값을 가진다. 문서의 각 요소의 참조 값을 가져오기 위해선 document가 필요하다.
- -document.querySelector("CSS형식 선택자 ex)요소명,#id,.class,...")
+ - document.querySelector("CSS형식 선택자 ex)요소명,#id,.class,...")
   JS영역에서 HTML 영역에 있는 해당요소를 가져온다.
- -document.querySelectorAll("문자열 CSS 선택자")
+ - document.querySelectorAll("문자열 CSS 선택자")
   JS영역에서 HTML 영엑에 있는 해당 요소를 배열 형태로 가져온다.
  - innerText를 활용하면 요소의 innerText를 변경 및 수정 가능하다
  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -233,7 +233,7 @@ row면 위쪽이 start 아래쪽이 end.
   4) commit 전까지는 임시 수정이다
 - 수많은 회원정보중 한사람을 삭제시키려면 primary key값을 삭제 
 - dummy라는 컬럼을 가진 table dual을 제공한다. (console.log처럼 입력값을 확인해볼수있음)
--scott 계정만들기
+- scott 계정만들기
    1) 관리자로 접속 
    2) @scott파일 경로 ex) @C:\oraclexe\app\oracle\product\10.2.0\server\RDBMS\ADMIN
    3) 새 명령프롬프트 -> 아이디 비밀번호 입력후 접속
@@ -353,7 +353,7 @@ row면 위쪽이 start 아래쪽이 end.
 - join
 - ansi join
    1)inner join 
-      1)where 절에 join을 하는 복잡한 코드를 적지 않아도 된다.
+      1) where 절에 join을 하는 복잡한 코드를 적지 않아도 된다.
    2)using
       1) 동일한 컬럼명을 가지고 있을때 사용 가능하다
    2)outer join
@@ -375,9 +375,9 @@ row면 위쪽이 start 아래쪽이 end.
 #### 수업 요약
 - rownum: 행번호을 부여하고 싶을때 쓰는 함수
 - 서브쿼리: 하나의 SQL문장절에 포함된 또다른 SELECT문장, 따라서 두번 질의를 한번의 질의로 해결이 가능하다.
-   1)Main-Query = Outer Query , Sub-Qury = Inner-Query
-   2)반드시 괄호로 묶어야한다.
-   3)서브쿼리 위치
+   1) Main-Query = Outer Query , Sub-Qury = Inner-Query
+   2) 반드시 괄호로 묶어야한다.
+   3) 서브쿼리 위치
       1) select / delete / update 문의 from 절과 where 절
       2) select 문의 having절
       3) insert 문의 into 절
@@ -393,11 +393,11 @@ row면 위쪽이 start 아래쪽이 end.
       4) exist: 비교조건이 서브쿼리의 결과중에 하나라도 만족하는 값이 존재하면 true
 - 데이터 모델
    1) 계층형
-      1)추후 개인학습
+      1) 추후 개인학습
    2) 네트워크형
-      1)추후 개인학습
+      1) 추후 개인학습
    3) 관계형
-      1)특징
+      1) 특징
          1) 행과 열을 가진 2차원 표에 데이터를 저장하는 모델.
          2) 여러가지 표를 조합하여 데이터를 유연하게 대응할 수 있다는 특징이 있다.
          3) 독립적으로 관리가 쉽다
@@ -430,7 +430,7 @@ not null + uniq
 - 제약조건 명명하는 2가지 방법<br>
 ![image](https://user-images.githubusercontent.com/108508922/179178522-84da5ef4-c982-4351-afcb-4fda34319944.png)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-### 데이터베이스04, javascript_ecma6
+### 데이터베이스04, javascript_ecma6 Step01~02
 #### 수업 요약
 - data복사
    1) 내용 복사:insert into member2 select * from member;
@@ -438,12 +438,13 @@ not null + uniq
    3) 테이블 구조만 복사:create table emp2 as select * from emp where 1=2;
 
 - 오라클 시작 안될때   
-   1)탐색기
-   2)내PC 우클릭
-   3)관리
-   4)서비스 및 응용프로그램
-   5)서비스
-   6)Oracleservice, oraclelistener 실행
+   1) 탐색기
+   2) 내PC 우클릭
+   3) 관리
+   4) 서비스 및 응용프로그램
+   5) 서비스
+   6) Oracleservice, oraclelistener 실행
+   
 - arrow function
    1) fucntion(){} = ()=>{}
    2) 주의사항 
@@ -455,10 +456,9 @@ not null + uniq
           }<br>
       2) 화살표 함수 안에서 this는 이벤트가 일어난 바로 그요소를 가르키지 못한다
         
-- javascript_ecma6_Step02
-   1)람다함수
-      1)함수안에 복잡한 javascript가 없을때 한줄로 표현할 수 있다.
-      2)let 변수명 = (num1, num2) => 리턴값;
+- 람다함수
+   1) 함수안에 복잡한 javascript가 없을때 한줄로 표현할 수 있다.
+   2) let 변수명 = (num1, num2) => 리턴값;
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - 내용복사 
@@ -472,9 +472,66 @@ not null + uniq
 -
 ![image](https://user-images.githubusercontent.com/108508922/179461990-b5f4fd3a-4e9c-44ae-a7ea-7f7a936abefb.png)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### javascript_ecma6 Step03~09
+#### 수업 요약
+- array
+   1. map 함수
+      1. 배열은 map() 함수를 원래 가지고 있다.
+      2. map() 함수를 호출하면서 함수를 전달 해야한다.
+      3. 전달하는 함수는 배열의 size 만큼 즉시 반복 호출된다.
+      4. 반복호출 되면서 그함수에 배열에 저장된 item을 순서대로 전달 해준다.
+      5. 함수안에서 리턴해주는 값을 순서대로 모아서 새로운 배열을 map() 함수를 리턴해준다. 
+      
+  2. filter 함수
+      1. 배열의 filter() 함수는 조건에 맞는 item으로 새롭게 구성된 배열을 리턴한다. 
+      2. true가 리턴된 index 의 item 으로만 구성된 배열이다.
+   
+- object
+   1. 객체를 분해해서 할당하기
+      1. let mem={num:1, name:"김구라", addr:"노량진"};
+      2. let {num, name}=mem;
+      
+   2. value를 변수 선언 후 object에 할당하기
+      1. let num=1;<br>
+         let name="구라 킴";<br>
+         let isMan=true;<br>
+      2. let mem2={num, name, isMan, sing(){}};
+      
+   3. key값을 변수 선언 후 object에 할당하기
+      1. let a="num";<br>
+         let b="name";<br>
+         let c="isMan";<br>
+      2. let mem3={[a]:2, [b]:"해골", [c]:false};
+
+-function 
+         
+- templateString
+- for
+- promise
+비동기 작업
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- array map함수<br>
+![image](https://user-images.githubusercontent.com/108508922/179891963-61188c87-a857-4842-927b-f381fd0e3de3.png)
+- filter 함수<br>
+![image](https://user-images.githubusercontent.com/108508922/179891880-b78afa7c-9505-481a-a03e-2e28cc0ced45.png)
+- 객체를 분해해서 할당하기<br>
+![image](https://user-images.githubusercontent.com/108508922/179894786-f2d2a878-27d8-458c-a72e-ce4e1e77777c.png)
+- value를 변수 선언 후 object에 할당하기<br>
+![image](https://user-images.githubusercontent.com/108508922/179895408-535e0fc4-17c0-40f9-8118-5d78572d806e.png)
+- key값을 변수 선언 후 object에 할당하기<br>
+![image](https://user-images.githubusercontent.com/108508922/179895466-5b5565f6-178d-4d6b-9319-3239b2f1d60b.png)
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### javascript_ecma6 
 #### 수업 요약
-비동기 작업
+javascript closure
+JavaScript Object Notation(JSON) 문자열
+XML
 교육 ing...
 
 
