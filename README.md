@@ -90,6 +90,15 @@ git clone (최초), git fetch (최초 이후) -> git merge origin/master.
 - 변경사항 취소하기 (add전)
    1) git restore .
    2) git clean -fd
+ git reset --hard 돌아가고싶은 commit 번호or별칭 (commit만 되었으면 언제든지 돌아갈 수 있다)  
+ git reflog (HEAD의 과거이력을 전부 표기)
+ git log 
+ git log --oneline (log 한줄표기)
+ 
+- 커밋없애기
+   1)commit 삭제 후 commit
+   2)commit 취소
+   3)github에 push를 했다면 취소하는 commit를 만드는게 좋다.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - Git Process<br>
 ![image](https://user-images.githubusercontent.com/108508922/177064701-5b385954-4abd-47cc-a30b-64a574f14f08.png)<br>
@@ -521,11 +530,6 @@ not null + uniq
 - key값을 변수 선언 후 object에 할당하기<br>
 ![image](https://user-images.githubusercontent.com/108508922/179895466-5b5565f6-178d-4d6b-9319-3239b2f1d60b.png)
 
-
-
-
-
-
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### javascript_ecma6 
 #### 수업 요약
@@ -533,6 +537,81 @@ javascript closure
 JavaScript Object Notation(JSON) 문자열
 XML
 교육 ing...
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### java MainClass 01~07
+#### 수업 요약
+- 이클립스설치
+   1. 이클립스 설치 후 실행하여 work_space 설정 
+   2. 설정은 window preference
+   3. encording 설정 preference -> encording검색-> workspace ->text file encording ->other-> UTF-8
+   4. font설정 preference->font설정 ->basic -> 맨밑 text font -> 더블클릭후 설정
+   
+- package
+   1. src우클릭->new->package->test.main
+   2. scr/test/main 이라는 폴더가 생성된다
+
+- 예약어
+   1. JAVA에서 예약된 예약어는 eclipse에서 빨간색으로 나타낸다
+   2. 중복사용 불가
+- class
+- method
+
+- java변수선언
+   1. java에서는 변수 type을 확정하여 정해야한다.
+   2. java는 정적언어 javascript는 동적언어라 한다.
+   4. data type은 사용저가 만들수 있어 무한대 이지만 기본 data type은 정해져있다.
+   3. ex)정수 = int num1=10;
+   4. 실수 = double num2=10.4;
+   5. 블리언type = boolean isRun=true;
+   6. stringtyep = String myName="김구라"; (String은 예약어가 아니다)
+
+- 디버깅
+   1. breakpoint 설정후 풍뎅이 아이콘 debug as
+   2. F6키로 실행 순서 대로 실행.
+   3. variable 창에서 변수들 확인.
+
+- 환경리셋
+   1. window
+   2. perspective
+   3. rest perspective
+ 
+- 기본 데이터 타입
+   1. 숫자
+      1. byte
+      2. short
+      3. int
+      4. long
+      5. float
+      6. double
+   
+   2. 논리
+      1. boolean
+      
+   3. 문자
+      1. char
+
+- object의 기능
+   1. 값의 저장소 (어떤 값)
+   2. 기능 (어떤 동작) 
+   
+- 지역변수
+   1. public static void main(String[] args) {//지역변수 영역}
+   2. 변수를 선언하고 값을 넣지않으면 만들어지지 않는다.(javascript는 undefined값이 들어간다)
+   3. 값을 넣는 시점에 변수가 만들어진다. 
+   4. 지역변수를 미리 만들고 필요한 값을 나중에 넣고 싶으면 초기값을 대입하는게 좋다
+   5. 숫자type=0; , 참조type=null;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-workspace 
+![image](https://user-images.githubusercontent.com/108508922/180112900-2e6f6fd1-df1d-4b60-b7f5-b9ff8763083a.png)
+- java 변수선언<br>
+![image](https://user-images.githubusercontent.com/108508922/180126937-11dee6f3-453d-4730-8d2c-debe1fca438c.png)<br>
+![image](https://user-images.githubusercontent.com/108508922/180121789-c767f01e-ade4-47fa-bf84-834c45a25556.png)
+- 디버깅<br>
+![image](https://user-images.githubusercontent.com/108508922/180126785-3fc34b61-0d7a-49fc-b4ec-4fb8613e2ec2.png)
+
+
 
 
 
