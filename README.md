@@ -539,7 +539,7 @@ XML
 교육 ing...
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-### java MainClass 01~07
+### java MainClass 01~08
 #### 수업 요약
 - 이클립스설치
    1. 이클립스 설치 후 실행하여 work_space 설정 
@@ -576,14 +576,16 @@ XML
    2. perspective
    3. rest perspective
  
-- 기본 데이터 타입
+- 기본 데이터 타입(java primitive data type)
    1. 숫자
-      1. byte
-      2. short
-      3. int
-      4. long
-      5. float
-      6. double
+      1.정수
+         1. byte
+         2. short
+         3. int
+         4. long
+      2.실수
+         1. float
+         2. double
    
    2. 논리
       1. boolean
@@ -591,25 +593,68 @@ XML
    3. 문자
       1. char
 
-- object의 기능
-   1. 값의 저장소 (어떤 값)
-   2. 기능 (어떤 동작) 
+- object(객체)
+   1. 참조 data 안에 들어있다
+   2. 저장소 (어떤 값) - field
+   3. 기능 (어떤 동작) - method
+   4. 참조값에 .을 찍으면 저장소나 기능을 이용하겠다라는 뜻이다.
    
 - 지역변수
-   1. public static void main(String[] args) {//지역변수 영역}
-   2. 변수를 선언하고 값을 넣지않으면 만들어지지 않는다.(javascript는 undefined값이 들어간다)
-   3. 값을 넣는 시점에 변수가 만들어진다. 
-   4. 지역변수를 미리 만들고 필요한 값을 나중에 넣고 싶으면 초기값을 대입하는게 좋다
-   5. 숫자type=0; , 참조type=null;
+   1. java는 전역변수가 없다 지역변수 아니면 field
+   2. method 안에서 만들어지는 지역변수는 stack 영역에 만들어진다.
+   3. 지역변수는 메소드가 실행중에 만들어졌다가 해당 메소드가 종료(리턴)되면 사라진다.
+   4. public static void main(String[] args) {//지역변수 영역}
+   5. 변수를 선언하고 값을 넣지않으면 만들어지지 않는다.(javascript는 undefined값이 들어간다)
+   6. 값을 넣는 시점에 변수가 만들어진다. 
+   7. 지역변수를 미리 만들고 필요한 값을 나중에 넣고 싶으면 초기값을 대입하는게 좋다
+   8. 숫자type=0; , 참조type=null;
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
--workspace 
+- workspace <br>
 ![image](https://user-images.githubusercontent.com/108508922/180112900-2e6f6fd1-df1d-4b60-b7f5-b9ff8763083a.png)
 - java 변수선언<br>
 ![image](https://user-images.githubusercontent.com/108508922/180126937-11dee6f3-453d-4730-8d2c-debe1fca438c.png)<br>
 ![image](https://user-images.githubusercontent.com/108508922/180121789-c767f01e-ade4-47fa-bf84-834c45a25556.png)
 - 디버깅<br>
 ![image](https://user-images.githubusercontent.com/108508922/180126785-3fc34b61-0d7a-49fc-b4ec-4fb8613e2ec2.png)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### java MainClass 
+#### 수업 요약
+
+- thread
+
+- 3항 연산자: type result = boolean ? value1 : value2
+   1. true면 value 1, false면 value2
+   2. : 의 양쪽 data type이 같아야한다.
+   
+- class
+   1. class의 역할
+      1. 객체의 설계도 역할: 해당 클래스로 객체를 만들었을때(new) 어떤 field 와 어떤 method를 가지게 할지 설계 할 수 있다.
+      2. data type 역할: 
+         1. 지역변수나 필드를 만들떄 선언하는 data type의 역할을 할 수 있다. 
+         2. 변수나 필드에 저장된 값의 사용 설명서에 해당된다.
+      3. static필드나 static 메소드를 포함하는 역할: 필요에 따라서 객체에 필드나 메소드를 만들지 않고 클래스 자체에 만들어 놓을 수도 있다.
+
+- static, stack heap
+   1. static : class
+   2. stack : local variable
+   3. heap : object
+
+- 가상의 Calculator 만들기
+   1. 다른 package의 Calculator class를 사용하기 위하여 수입하여야 한다.(import)
+   2. 객체를 생성한: new Calculator() -> heap 영역에 사물함에 객체가 만들어지고 참조값이 return 된다.
+   3. 참조값을 지역변수에 넣기 위하여 class명이 type인 변수를 만든다.
+   4. public String brand="샤오미"; (필드값)
+   
+
+      
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- 참조값의 method 활용법<br>
+![image](https://user-images.githubusercontent.com/108508922/180351211-c8a3ded2-7510-4d46-afb5-2b34f4a33d59.png)
+- Calculator class class<br>
+![image](https://user-images.githubusercontent.com/108508922/180385546-a50f02d4-234d-4fd1-a3d9-d4361333ba9c.png)
+- main class<br>
+![image](https://user-images.githubusercontent.com/108508922/180385705-87b17c23-eafd-4e7a-8bc6-2937b6282fec.png)
 
 
 
