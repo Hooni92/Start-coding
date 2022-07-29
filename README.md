@@ -769,8 +769,26 @@ XML
 ![image](https://user-images.githubusercontent.com/108508922/181431719-c9dc3bc4-e247-4a3f-a4ba-6b07bd0a8c50.png)
 - 예약어 super<br>
 ![image](https://user-images.githubusercontent.com/108508922/181450674-c4796cd0-cbdd-43a3-9044-ca145cf8ca7c.png)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+### java 6
+#### 수업 요약
 
+- abstract 
+   1. abst
+   2. abstract 클래스는 객체를 생성할 수 없다.
+   3. 따라서 자식 클래스를 생성하여 상속한뒤 abstract 메소드를 Override 한다.
 교육 ing...
+
+- interface
+   1. 생성자가 없다 (단독 객체 생성 불가)
+   2. 구현된 메소드는 가질수 없다 ( 추상 메소드만 가질수 있다 )
+   3. final
+      1. 값이 변하지 않는 상수를 지정할 때 쓰이는 예약어.ex)javascript에서 const와 같다.
+   4. 필드는 static final 상수만 가질수 있다.
+   5. data type  의 역활을 할수 있다.
+   6. interface type 의 참조값이 필요하면 구현(implements) 클래스를 만들어서
+   7. 객체를 생성해야 한다.
+   8. 클래스 상속은 단일 상속이지만, 인터페이스는 다중 구현이 가능하다
 
 
 
