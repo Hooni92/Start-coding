@@ -789,6 +789,58 @@ XML
    6. interface type 의 참조값이 필요하면 구현(implements) 클래스를 만들어서
    7. 객체를 생성해야 한다.
    8. 클래스 상속은 단일 상속이지만, 인터페이스는 다중 구현이 가능하다
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### java 7
+#### 수업 요약
+
+- @FunctionalInterface
+  1. 함수 모양으로 사용 할 인터페이스에 붙이는 어노테이션
+  2. 추상메소드가 1개인 인터페이스다.
+  3. 추상 메소드의 갯수가 1개로 강제된다.
+  4. 추상메소드가 1개인 인터페이스는 javascript의 arrow function과 같이 override를 표현 할 수 있다.
+ 
+- GenericClass 
+   1. 클래스명<T> T로 임시적인 type을 정해주고 나중에 전달받을 type을 T에 넣어준다.
+   2. 객체를 생성할때 Generic 클래의 type은 생략가능하다.ex) 클래스명<Apple>generic= new 클래스명<>
+
+- ArrayList
+   1. javascript의 배열[index[0],index[1],...] 생성과 비슷하다.
+   2. .add(배열에 추가), .get(배열값 indext번호로 불러오기), .remove(인덱스값의 내용삭제), .clear();전체삭제
+   3. List interface에 대부분의 기능이 실려있어서 List type으로 가져와도 활용가능하다.
+   4. 기본 데이터 type은 저장할 수 없으므로 저장 하고 싶으면 Wrapper Class를 활용한다.
+
+- Scanner
+   1. Scanner(System.in) 객체를 생성하여 .nextLine();으로 문자열을 입력받고, 출력할수 있다.
+   
+- for(type 변수명:배열명)
+   1. 배열의 값을 하나씩 가져온다.
+ 
+- HashMap 
+   1. javascript의 객체{key1:value1, key2:value2,...} 생성과 비슷하다.
+   2. value 값을 Object로 설정하면 int type, String type 상관없이 넣을 수 있지만. 넣은 값을 사용할땐 casting 해주어야한다.
+
+- hashSet 
+   1. Set 인터페이스를 구현한 클래스 이다. 
+   2. 순서가 없다.
+   3. key 값도 없다.
+   4. 중복을 허용하지 않는다.
+   5. 어떤 data 를 묶음(집합) 으로 관리하고자 할때 사용한다.
+   
+ - while
+   1. (true)면 {}실행하는건 for문과 동일하다.
+   2. for문은 반복횟수가 정해져있을때, while문은 반복횟수를 알 수 없을때.
+   3. break : 인접한 블럭(반복문)탈출
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- array순서대로 하나씩 값을 가져올때<br>
+![image](https://user-images.githubusercontent.com/108508922/182062184-0ac33c5f-b518-4085-939f-c1213a45af6b.png)
+- Generic Class 
+![image](https://user-images.githubusercontent.com/108508922/182110958-d382a0b3-7b0e-49bb-af53-97a1ed2f64d7.png)<br>
+- Generic Class Main Class
+![image](https://user-images.githubusercontent.com/108508922/182111434-fddd35bf-699a-44c1-86d1-02b864761005.png)
+
+- javascript vs java<br>
+![image](https://user-images.githubusercontent.com/108508922/182083581-77841309-3007-4d91-b17b-9fdc4a5bcde0.png)
+
 
 
 
