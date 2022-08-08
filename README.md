@@ -910,11 +910,30 @@ XML
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### java 11
 #### 수업 요약
+- ojdbc6.jar file 적용시키기
+   1. src 폴더 우클릭.
+   2. bulid path 
+   3. Configure bulid path
+   4. Libraries tab
+   5. Modulepath 클릭
+   6. add External JARs
 
 - executedUpdate
-   1. autocommit 기능이있다.
-   2. autocommit 기능을 하지 않으려면 setAutocommit(false); 후 -> commit();할 수 있다
+   1. insert, update, delete 문에 사용
+   2. int type return:변경된 row의 갯수
+   3. autocommit 기능이있다.
+   4. autocommit 기능을 하지 않으려면 setAutocommit(false); 후 -> commit();할 수 있다
    
+- executeQuery()
+   1. select 문에 활용
+   2. ResultSet return: select문을 수행한 결과
+      1. .next() cursor를 내린다.
+      2. .getString(칼럼명), .getInt(칼럴명) cursor가 위치한 colum 정보를 가져온다.
    
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- resultSet cursor<br>
+![image](https://user-images.githubusercontent.com/108508922/183319312-e7039142-9750-4354-ac4f-3c58c3a78906.png)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### java 12
+#### 수업 요약
 
