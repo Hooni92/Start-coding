@@ -990,7 +990,7 @@ XML
 - /fortune과 /fortune.html 응답 
 ![image](https://user-images.githubusercontent.com/108508922/184051761-39905f07-9813-46fc-9bb0-d1c73df4959c.png)
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-### Web Programing 3
+### Web Programing 3~4
 #### 수업 요약
 
 - DB연결.
@@ -1010,6 +1010,27 @@ XML
 
 - ApacheTomcat은 context.xml, server.xml, web.xml 을 읽는다.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Web Programing 5
+#### 수업 요약
+
+- setAttribute, getAtrribute, forward
+   1. 최초의 요청을 서블릿에 하고 서블릿에서 로직을 수행하고 응답을 forward로 jsp에 넘겨주면 jsp에서 응답을 수행한다.
+   2. req.setAttribute("key",value)
+   3. RequestDispatchar rd=req.getRequestDispatcher("webapp 폴더의 파일경로")
+   4. rd.forward(req, resp);
+
+- request scope , session scope
+   1. 웹 서버는 동시에 불특정 다수의 요청을 받고 응답하는 application 이다.
+   2. servlet에서 req.getSession()으로 
+   3. WEB-INF는 클라이언트에게 보여지지 않는 보안이 되어있따. forward를 통해 특정 jsp는 불러올수있다.
+   
+- jstl-1.2
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- setAttribute, getAtrribute, forward
+![image](https://user-images.githubusercontent.com/108508922/185524005-f0c4fcea-bc68-41ba-a561-eb61841a2b01.png)
+- request scope , session scope
+![image](https://user-images.githubusercontent.com/108508922/185535049-f2ae4450-d021-40f1-b3fd-11b4650a7a56.png)
 
 
 
