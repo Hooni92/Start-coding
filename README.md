@@ -1027,10 +1027,35 @@ XML
    
 - jstl-1.2
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-- setAttribute, getAtrribute, forward
+- setAttribute, getAtrribute, forward<br>
 ![image](https://user-images.githubusercontent.com/108508922/185524005-f0c4fcea-bc68-41ba-a561-eb61841a2b01.png)
-- request scope , session scope
+- request scope , session scope<br>
 ![image](https://user-images.githubusercontent.com/108508922/185535049-f2ae4450-d021-40f1-b3fd-11b4650a7a56.png)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Web Programing 6
+#### 수업 요약
+
+- 이클립스에서 DB접속하는 플러그인설치
+   1. http://quantum.sourceforge.net/
+   2. 밑에 point eclipse at: 
+   3. http://quantum.sourceforge.net/update-site 복사
+   4. 이클립스 help
+   5. install new software
+   6. work with: 붙여넣기 enter
+   7. 이클립스 재접속 후 QuantumDB환경들어가기
+   8. new bookmark 아이콘클릭
+   9. jar파일 찾아주기
+   10. oracle.jdbc.driver.OracleDriver
+   11. 아이디, 비번 입력후 이름 xe해주고 next
+   
+   
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- js로 연결시켜주기<br>
+![image](https://user-images.githubusercontent.com/108508922/185825855-34282479-c3ce-49bb-882a-73334085419c.png)
+- 외부 파일 업로드<br>
+![image](https://user-images.githubusercontent.com/108508922/185855834-37f12856-3d1b-4de3-a4a9-aefc09fdab98.png)
 
 
 
