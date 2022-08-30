@@ -1102,7 +1102,7 @@ XML
 ### Vue js
 #### 수업 요약
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-### Spring
+### Spring 설치
 #### 수업 요약
 
 - java 설치
@@ -1112,6 +1112,58 @@ XML
    4. path선택->편집->새로만들기->
    5. https://maven.apache.org/ -> download ->
    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Spring 1
+#### 수업 요약
+
+- MVC (model, view , controller)
+   1. 스프링 프레임워크에서 Model은 data
+   2. View는 /WEB-INF/views/폴더안에 있는 jsp 페이지이고 
+   3. Controller는 HomeController, AController.. 등 @Controller 어노테이션으로 만든 객체를 의미한다
+- com.gura.myapp(마지막 문자열이 context path가 된다)
+- 프로젝트의 M이란? Maven 프로젝트
+   1. pom.xml 문서가 존재한다.
+   2. pom.xml 에는 프로젝트의 설정, 주로 의존 라이브러리의 목록이 들어 있다.
+   3. 필요한 읜존 라이브러리가 있다면, pom.xml에 <dependency></dependency> 안에 설정을 추가하 하는것 만으로 자동 다운로드 되고 사용할 준비가 된다.
+   4. Maven 프로젝트를 만들기 위해서는 Maven을 다운로드해서 설치 해야한다. https://maven.apache.org 에서 다운로드 후 cmd에서 mvn입력하면 확인 할 수있다.
+   5. pom.xml 에 dependency 설정을 할 문자열을 어떻게 얻어내야하는가?   
+   6. https://mvnrepository.com/에서 필요한 설정을 검색해서 maven 코드를 복사하여 붙여넣기하면 된다.
+   7. Libraries 의 Maven Dependencies 에서 설정한 목록을 확인할 수 있다.
+   
+- 왜 root요청에 대하여 webapp에 views 폴더의 home.jsp에서 응답을 했을까에 대하여 알아보자
+   1. 시작점 web.xml 의 servlet설정으로 인하여 경로설정이 정해진다.
+   
+- DispatcherServlet은 미리 만들어 놓은 Servlet인데 만일 우리가 해당 서블릿의 동작을 바꾸고 싶으면 어떻게 해야할까?
+   1. 미리 만들어진 Apache Tomcat 서버의 설정은 web.xml로 할 수 있듯이 DispatcherServlet의 동작도 xml 문서로 설정할 수 있다.
+   2. Servle-context.xml 문서에 설정을 하면 된다.
+
+- Servlet-context.xml 에는 스프링 프레임 워크가 작동하는데 있어서 필요한 설정을 하는 곳이다.
+
+1. WebBrowser의 요청을 Tomcat Webserver의 DispatcherServlet에서 최초로 받고해당 요청을 처리할 Controller를 찾는다.
+3. controller 영역에서는 응답할 필요할 data를 request영역에 저장하여 jsp페이지에 foroward한다.
+2. /WEB-INF/views/ 안의 xxx.jsp로 응답을 위임시켜 jsp에서 response 한다.
+
+- 왜 사용할까?
+   1. 개발 단계에서는 까다롭고 코딩양이 증가하지만 한번 개발해 놓으면 유지 보수가 용의하다.
+- 왜 유지보수가 용이할까?
+   1. 객체들간의 의존관계가 느슨해 져서 용의하다 
+- 어떻게 하면 객체들간의 의존관계를 느슨하게 할 수 있을까?
+   1. 필요한 핵심의존 객체의 생성과 관리를 프레임 워크에게 맡긴다.
+   2. interface type을 적극 활용한다.
+  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+![image](https://user-images.githubusercontent.com/108508922/187323731-536207f8-2533-437f-8345-4c95e26a996b.png)
+- root요청 시작점 web.xml의 상속받은 요청 전달자 Servlet<br>
+![image](https://user-images.githubusercontent.com/108508922/187326599-3277d1a5-09ee-4345-a49b-843d8d86f466.png)
+- 접두어, 접미어 설정 <br>
+![image](https://user-images.githubusercontent.com/108508922/187329072-75881ed5-1a92-4214-9dcd-1967073ec52d.png)<br>
+![image](https://user-images.githubusercontent.com/108508922/187329302-da08c10b-4754-4d58-aed9-c53a414ad7bb.png)
+- 응답경로<br> 
+![image](https://user-images.githubusercontent.com/108508922/187330317-5bf2e94f-3494-4b70-a24d-9578fb50b07d.png)
+
+
+
+
     
 
 
