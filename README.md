@@ -1168,8 +1168,13 @@ XML
 @RequestMapping
 @Autowired
 @Component
-@Around("aspectj expression")
+@Around("aspectj expression") : 어떤 메소드 주위에서 동작을 할지 
 @Aspect
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+- 메소드명은 auth로 시작하고 리턴type은 ModelAndView,  (..)->메소드에 전달되는 인자와 타입은 자유이다. 인자중 하나는 반드시 HttpSevletRequest 인자가 있어야한다.
+![image](https://user-images.githubusercontent.com/108508922/188351149-b86fcf9c-5aa2-4df9-aabe-c63284f73e31.png)
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Spring 3
 #### 수업 요약
@@ -1190,27 +1195,73 @@ Service
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Spring 4
-#### 수업 요
+#### 수업 요약
 
 - 스프링 프레임 워크의 3대 핵심개념
    1. DI(Dependency Injection)
       1. 필요한 핵심 의존 객체를 주입 받아서 사용하는 구조
 
-   2.IOC(Inversion Of Controller)
+   2. IOC(Inversion Of Controller)
       1. 객체의 생성과 조립(DI 등등) 관리를 스프링이 실행될때 알아서 동작하는 구조
       
    3. AOP(Aspect Oriented Programming) 관점지향 프로그래밍
       1. 핵심비즈니스 로직과는 상관없는 횡단관심사를 따로 작성해 놓고 원하는 위치에 따로 작성된 로직을 설정을 통해서 적용 시키는 구조 이다.
       2. 주로 로그 기록이나, 테스트, 인증(auth) 등의 작업을 할 때 사용한다.
       3. ex) 수십개의 혹은 수백개의 메소드에 핵심 비즈니스 로직과는 상관없는 무언가 같은 작업을 해야 한다면 해당 작업을 따로 만들어 놓고 원하는 메소드에 설정만으로 적용시킬 수 있다면 편리하지 않을까?
- -Asepct가 어떻게 적용이 될까?
- 1. aspectj expression이 적용될 메수드에 부합이 되어야한다.
- 2. aspect 객체는 spring bean 컨테이너에서 관리가 되어야 한다.
- 3. 적용할 메소드를 가지고 있는 객체도 역시 spring bean 컨테이너에서 관리되는 객체여야한다.
+      4. 횡단관심사(CrossCutting Concerns) 중요 비즈니스 로직과는 동떨어진 로직
+ - Asepct가 어떻게 적용이 될까?
+ 1. spring AOP처리중 하나로 메소드 실행 직전 및 실행 직후 개입하여 정보를 조건부로 리턴한다.
+ 3. aspectj expression이 적용될 메수드에 부합이 되어야한다.
+ 4. aspect 객체는 spring bean 컨테이너에서 관리가 되어야 한다.
+ 5. 적용할 메소드를 가지고 있는 객체도 역시 spring bean 컨테이너에서 관리되는 객체여야한다.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - AOP code
 ![image](https://user-images.githubusercontent.com/108508922/188045404-807edd7d-308d-4c06-afbd-acab80c00c97.png)
+- Aspectj 로그인 여부 경로 빨간색:로그인안되있을시 초록색:로그인 되어있을시 (joinPoint.Proceed()는 obj를 리턴하는데 obj=mView이다)<br> 
+![image](https://user-images.githubusercontent.com/108508922/188351774-ee00b56a-3229-4e59-b584-aea0d930568e.png)
 
-    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Spring 5
+#### 수업 요약
+
+- Tomcat Web Server App은 web.xml, server.xml, context.xml 등 과 같은 xml문서를 읽어 동작을 준비한다. 따라서 서버 설정을 하려면 web.xml, server.xml, context.xml을 설정한다.
+- DispatcherServlet이 servlet-context.xml을 읽어 온다 따라서 spring설정을 하고 싶으면 sevlet-context.xml을 설정하면 된다.
+- Client가 xxx.do로 끝나는 요청을하면 DispaterServlet이 어떤 controller로 처리할지 분배를 해준다.
+- Dao를 Bean으로 만들기 위해서 component-scan이 이루어 져야하고 적절한@(어노테이션)이 붙어 있어한다.
+- ModelAndVie 객체에 대한 이해
+   1. 컨트롤러에서 리턴 rtpe으로 지정할 수 있는 객체이다.
+   2. Model과 View page 정보를 같이 담을 수 있는 객체이다.
+   3. Model은 view page에 전달할 데이터 이다.
+   4. 경우에 따라서는 redirect 이동할 경로도 담을 수 있다.
+   5. ModelAndView 객체에 addObject()메소드를 통해서 담은 데이터는 spring 프레임워크가 동작하면서 자동으로 HttpSevletRequest 객체에 담긴다.
+
+- Controller는 어떤 service를 통해서 비즈니스 로직을 처리하고 view페이지를 어디로 보낼지만 결정한다.<br>
+
+[spring frame work 에서 json 문자열을 응답하는 방법도 알고 있어야 한다.]
+- 필요한 이유: ajax 요청에 대한 응답으로 json문자열 응답을 많이한다.
+
+- File System
+   1. file은 MultipartFile type으로 받아야 한다.
+   2. 기능 : MultiPartFile, getOriginalFilename(), getSize()
+   3. 임시폴더에 저장된 파일을 원하는 경로로 이동시켜줘야 한다는 점이 있다.(transferTo(new File(savePath)) -> savePath-realPath+File.separator(구분자)+saveFileName;
+   4. separator: 리눅스 = / 윈도우 = \
+   
+- myBatis를 활용하면 Dynamic Query 작성에 유용한다.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- DB Connection 하기위해 다음의 이름이 같아야 한다.<br>
+![image](https://user-images.githubusercontent.com/108508922/188341284-19941cfa-4e99-408e-ad9c-723c9ae30b0f.png)
+- sqlSession 객체를 DI 받는 구조<br>
+![image](https://user-images.githubusercontent.com/108508922/188342063-1620be3e-ceda-4a6b-8415-e4cb8a4d98a3.png)
+- Dao class가 bean이 되는 구조<br>
+1. ![image](https://user-images.githubusercontent.com/108508922/188342311-de517595-d048-4023-87b1-7b78286e1c73.png)<br>
+2. ![image](https://user-images.githubusercontent.com/108508922/188342425-a3d09c6f-2206-44aa-8e81-744945063c19.png)<br>
+- savpath<br>
+![image](https://user-images.githubusercontent.com/108508922/188354448-467d2908-d5a2-428a-8548-184799dba70b.png)
+- 비밀번호 암호화<br>
+![image](https://user-images.githubusercontent.com/108508922/188384934-e7723bf6-3485-4a7f-853d-dcb1057808ae.png)
+- 검색기능을 추가한 Dynamic Query 작성예시<br>
+![image](https://user-images.githubusercontent.com/108508922/188416658-919d1661-46a7-4694-987a-9f5d08e04eb2.png)
+
+
 
 
