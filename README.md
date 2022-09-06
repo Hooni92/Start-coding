@@ -1261,6 +1261,11 @@ Service
 ![image](https://user-images.githubusercontent.com/108508922/188384934-e7723bf6-3485-4a7f-853d-dcb1057808ae.png)
 - 검색기능을 추가한 Dynamic Query 작성예시<br>
 ![image](https://user-images.githubusercontent.com/108508922/188416658-919d1661-46a7-4694-987a-9f5d08e04eb2.png)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Spring 6
+#### 수업 요약
+
+- mapper.xml => myBatise가 로딩하고 myBatise가 정해놓은 형식대로 작동한다.
 
 
 
