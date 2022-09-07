@@ -1273,6 +1273,10 @@ Service
 #### 수업 요약
 댓글수업+
 ![image](https://user-images.githubusercontent.com/108508922/188811107-7d9824a2-0d5c-48ad-87f2-cdbed9de718b.png)
+- ajaxFormPromise response object로 변환 
+![image](https://user-images.githubusercontent.com/108508922/188812106-72c46d38-6e97-4dfb-bc2a-534094799ba7.png)
+   
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
