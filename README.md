@@ -1352,10 +1352,11 @@ Service
 8. vue 설치하기 cmd에서 npm install -g @vue/cli <br>
 ![image](https://user-images.githubusercontent.com/108508922/190939222-2a86bb64-e18a-4644-bc20-37a3199bfa8f.png)<br>
 9. https://www.npmjs.com/ 에서 필요한 기능 찾아서 설치 할 수있다.
-10. 서버실행하기 npm run serve<br>
+10.vue project 만들기 powershell or cmd에서 (파일경로) vue create 프로젝트명
+11. 서버실행하기 npm run serve<br>
 ![image](https://user-images.githubusercontent.com/108508922/190946787-543f3cb4-ab2f-48a5-b294-6c7f7878abda.png)<br>
 ![image](https://user-images.githubusercontent.com/108508922/190946834-98764b2f-c518-4009-a38d-8a03f32201e7.png)<br>
-11. 서버 종료하기 ctrl + c 2번
+12. 서버 종료하기 ctrl + c 2번
 
 
 - assets 폴더는 img 와 같은 파일을 넣는다.
@@ -1364,4 +1365,12 @@ Service
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### javascript nodejs 
+#### 수업 요약
+
+- vue로 작업을 한다는 것은 로딩될 javascript를 만든다는 것이다. (app.vue 파일을 compile 해서 클라이언트가 로딩할 java script 파일을 만든다.)
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+![image](https://user-images.githubusercontent.com/108508922/191145118-d5066f03-05af-490f-a29e-f6af24178e34.png)
+- vue에서 각 영역의 역할<br>
+![image](https://user-images.githubusercontent.com/108508922/191155191-8bf09501-e47f-4cd4-9d35-a8b5e4a0c354.png)
+
