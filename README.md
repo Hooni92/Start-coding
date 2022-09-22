@@ -1396,5 +1396,11 @@ Service
 ![image](https://user-images.githubusercontent.com/108508922/191398777-5a5200be-dac4-45b6-9591-cc5e9364c943.png)
 - good 질문<br>
 ![image](https://user-images.githubusercontent.com/108508922/191405950-c63d1809-7c9e-49da-84c7-cc22b7fabf79.png)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### javascript nodejs4 & react 환경설정
+#### 수업 요약
+
+- react 환경설정
+1. node js v14이상 설치! node package 관리 (npm.exe , yarn.exe, npx.exe)
 
 
