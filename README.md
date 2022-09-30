@@ -1408,4 +1408,22 @@ Service
 - class 속성 부여시 className=""
 - onclick 속성 부여시 onClick={()=>{alert("")}}
 - react는 함수 기반 또는 클래스 기반으로 작성할 수 있다. 클래스 기반은 함수 기반으로 작성하는 것 보다 편리하지만 메모리를 함수 기반 보다 좀 더 차지한다.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Python 1
+#### 수업요약
+
+- 설치
+1. https://cafe.daum.net/flowlife/RUrO/32 -> 32번글 도구: 이클립스, VScode, 파이참 
+2. https://www.eclipse.org/downloads/packages/ -> Eclipse IDE for Enterprise Java and Web Developers 86x64 window  
+3. https://www.anaconda.com/ -> download
+4. 이클립스 실행 Help-> Marketplace -> python검색 -> Dev 설치 -> 기본값설정->
+
+
+- 변수
+1. 변수는 대소문자 구별한다
+2. 변수의 첫글자는 숫자가 될 수 없다.
+3. 키워드(예약어)는 변수명이 될 수 없다. (확인: keyword.kwlist)
+4. type: 정수 int, 실수 float, 실수+허수 complex, True,false booleanm, 
+5. type확인 isinstance
+6. 
 
