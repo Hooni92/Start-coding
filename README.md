@@ -1453,3 +1453,27 @@ https://it-eldorado.tistory.com/160
 - 웹 크롤링 vs 웹 스크래핑
 - 웹 크롤링: 여러 사이트를 돌아다니면서 필요한 자료를 추출해 내는 것.
 - 웹 스크래핑: 특정 웹 사이트나 페이지에서 필요한 데이터를 자동으로 추출해 내는 것.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Python 9
+#### 수업요약
+- request.get().text -> 일반 문자열
+-> beautif
+
+- 웹서버 구축
+- HTTPserver :  기본적인 socket 연결을 관리
+- SimpleHTTPRequestHandler : 요청을 처리 (get, post)
+
+MTV(Model-Template-View)
+- Model
+- Template
+- View (
+
+- N-tier
+- 2-tier
+- Web Server 와 WAS(Web Application Server) 차이
+
+
+- settings.py : 
+- urls.py : 모든 요청에대한 경로 설정(맵핑해서 컨트롤러로 보낸다)
+- wsgi.py : 서버호환
+- manage.py :  
