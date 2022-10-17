@@ -6,7 +6,12 @@
 2. Oracl, Data base.
 3. Jsp
 5. Spring Framework
-6. Vue
+6. Vue , React
+7. Python, MariaDB
+8. Django Framework
+9. R, 데이터분석
+10. 딥러닝
+
 ## 본론
 ### Step01_Hello
 #### 수업 요약
@@ -1480,3 +1485,6 @@ MTV(Model-Template-View)
 ### Python 10 
 #### 수업요약 - Django
 
+- 원격DB연결 settings 설정
+- Django - /admin 계정활용
+-
