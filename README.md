@@ -1495,3 +1495,4 @@ MTV(Model-Template-View)
 
 
 - 전자정부 프레임워크 (eGov) 공부하기
+- 모놀리식 아키텍처, MSA 아키텍처
